@@ -148,42 +148,42 @@ document.addEventListener("DOMContentLoaded", () => {
             nombre: "Habitación Standard Simple",
             tipo: "Sencilla",
             precio: "$120,000 COP",
-            img: "hab1.avif"
+            img: "../images/hab1.avif"
         },
         {
             id: 2,
             nombre: "Habitación Standard Doble",
             tipo: "Sencilla",
             precio: "$160,000 COP",
-            img: "hab2.1.webp"
+            img: "../images/hab2.1.webp"
         },
         {
             id: 3,
             nombre: "Deluxe Ocean View",
             tipo: "Deluxe",
             precio: "$250,000 COP",
-            img: "hab2.jpg"
+            img: "../images/hab2.jpg"
         },
         {
             id: 4,
             nombre: "Deluxe con Balcón y Jacuzzi",
             tipo: "Deluxe",
             precio: "$320,000 COP",
-            img: "jaz.jpg"
+            img: "../images/jaz.jpg"
         },
         {
             id: 5,
             nombre: "Junior Suite Familiar",
             tipo: "Suite",
             precio: "$380,000 COP",
-            img: "hab0.jpg"
+            img: "../images/hab0.jpg"
         },
         {
             id: 6,
             nombre: "Presidential Suite VIP",
             tipo: "Suite",
             precio: "$500,000 COP",
-            img: "hab3.jpg"
+            img: "../images/hab3.jpg"
         }
     ];
 
