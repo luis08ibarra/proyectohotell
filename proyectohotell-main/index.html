@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel L&E - Experiencia
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), 
+                        url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            min-height: 85vh;
+        }
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        .room-card img {
+            height: 240px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-warning fs-3" href="index.html"> Hotel L&E </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/habitaciones.html">Habitaciones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/reservas.html">Reservar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/clima.html">Clima Local</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/administracion.html">Gestión</a></li>
+                    <li class="nav-item ms-lg-2">
+                        <button id="btnToggleDark" class="btn btn-outline-warning btn-sm px-3">🌙 Modo Dark</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <header class="hero-section text-white d-flex align-items-center text-center">
+        <div class="container py-5">
+            <span class="badge bg-warning text-dark uppercase px-3 py-2 mb-3 fw-bold tracking-wide">Experiencia 5 Estrellas</span>
+            <h1 class="display-3 fw-bold mb-3">Bienvenidos a Hotel L&E</h1>
+            <p class="lead mb-4 mx-auto style-description" style="max-width: 700px;">
+                Vive una experiencia inolvidable. Disfruta de habitaciones exclusivas, gastronomía excepcional y espacios diseñados para que descanses y te relajes como nunca.
+            </p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="pages/habitaciones.html" class="btn btn-warning btn-lg fw-bold px-4">Ver Habitaciones</a>
+                <a href="pages/reservas.html" class="btn btn-outline-light btn-lg fw-bold px-4">Reservar Ahora</a>
+            </div>
+        </div>
+    </header>
+
+  
+    <section class="py-5 bg-white">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Nuestros Servicios Exclusivos</h2>
+                <p class="text-muted">Diseñados para hacer de tu estadía una experiencia inolvidable</p>
+            </div>
+            <div class="row g-4 text-center">
+                <div class="col-md-3">
+                    <div class="p-3">
+                        <div class="feature-icon bg-warning-subtle text-warning mb-3">
+                            <i class="bi bi-water"></i>
+                        </div>
+                        <h5 class="fw-bold">Piscina</h5>
+                        <p class="text-muted small">Vista panorámica al océano con servicio de bar integrado.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="p-3">
+                        <div class="feature-icon bg-warning-subtle text-warning mb-3">
+                            <i class="bi bi-cup-hot"></i>
+                        </div>
+                        <h5 class="fw-bold">Restaurante</h5>
+                        <p class="text-muted small">Gastronomía internacional y platos típicos caribeños.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="p-3">
+                        <div class="feature-icon bg-warning-subtle text-warning mb-3">
+                            <i class="bi bi-flower1"></i>
+                        </div>
+                        <h5 class="fw-bold">Spa</h5>
+                        <p class="text-muted small">Masajes relajantes, sauna y tratamientos corporales.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="p-3">
+                        <div class="feature-icon bg-warning-subtle text-warning mb-3">
+                            <i class="bi bi-wifi"></i>
+                        </div>
+                        <h5 class="fw-bold">Wi-Fi</h5>
+                        <p class="text-muted small">Conexión de alta velocidad en todas las instalaciones.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="py-5">
+        <div class="container py-4">
+            <div class="d-flex justify-content-between align-items-end mb-4">
+                <div>
+                    <h2 class="fw-bold mb-1">Habitaciones Destacadas</h2>
+                    <p class="text-muted mb-0">Encuentra el espacio perfecto para tu descanso</p>
+                </div>
+                <a href="pages/habitaciones.html" class="btn btn-outline-dark fw-bold">Ver Catálogo Completo &rarr;</a>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card room-card h-100 border-0 shadow-sm rounded-3 overflow-hidden">
+                        <img src="images/hab1.avif" class="card-img-top" alt="Standard Simple">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge bg-secondary">Sencilla</span>
+                                <span class="text-primary fw-bold">$120,000 COP</span>
+                            </div>
+                            <h5 class="card-title fw-bold">Habitación Standard Simple</h5>
+                            <p class="card-text text-muted small flex-grow-1">Ideal para viajes de negocios o estancias cortas, confort asegurado.</p>
+                            <a href="pages/reservas.html" class="btn btn-dark w-100 mt-3 fw-bold">Reservar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card room-card h-100 border-0 shadow-sm rounded-3 overflow-hidden">
+                        <img src="images/hab2.jpg" class="card-img-top" alt="Deluxe Ocean View">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge bg-info text-dark">Deluxe</span>
+                                <span class="text-primary fw-bold">$250,000 COP</span>
+                            </div>
+                            <h5 class="card-title fw-bold">Deluxe Ocean View</h5>
+                            <p class="card-text text-muted small flex-grow-1">Vista al mar, cama King y balcón privado para atardeceres espectaculares.</p>
+                            <a href="pages/reservas.html" class="btn btn-dark w-100 mt-3 fw-bold">Reservar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card room-card h-100 border-0 shadow-sm rounded-3 overflow-hidden">
+                        <img src="images/hab3.webp" class="card-img-top" alt="Presidential Suite VIP">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge bg-warning text-dark">Suite VIP</span>
+                                <span class="text-primary fw-bold">$500,000 COP</span>
+                            </div>
+                            <h5 class="card-title fw-bold">Presidential Suite VIP</h5>
+                            <p class="card-text text-muted small flex-grow-1">La máxima expresión de lujo, jacuzzi privado y atención personalizada 24/7.</p>
+                            <a href="pages/reservas.html" class="btn btn-dark w-100 mt-3 fw-bold">Reservar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="bg-dark text-white py-5">
+        <div class="container text-center py-3">
+            <h3 class="fw-bold mb-3">¿Planificando tu viaje? Consulta el Clima</h3>
+            <p class="text-secondary mb-4">Verifica la previsión meteorológica de la zona en tiempo real antes de tu llegada.</p>
+            <a href="pages/clima.html" class="btn btn-warning fw-bold px-4">Ver Clima Local</a>
+        </div>
+    </section>
+
+    
+    <section class="py-5 bg-light border-top">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <span class="badge bg-warning text-dark px-3 py-2 fw-bold text-uppercase mb-2">Opiniones de Nuestros Clientes</span>
+                <h2 class="fw-bold">Lo que Dicen Nuestros Huéspedes</h2>
+                <p class="text-muted">Historias reales de experiencias memorables
+                </p>
+            </div>
+
+            <div class="row g-4">
+                
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm p-4 rounded-3">
+                        <div class="card-body d-flex flex-column">
+                            <div class="text-warning mb-3">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="card-text text-secondary mb-4 flex-grow-1 fs-6">
+                                "Una experiencia inolvidable. La piscina infinity y la vista al mar desde la suite superaron todas nuestras expectativas. El servicio del personal es atento y de primer nivel."
+                            </p>
+                            <div class="d-flex align-items-center mt-auto">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Mariana Gómez" class="rounded-circle me-3" width="50" height="50" style="object-fit: cover;">
+                                <div>
+                                    <h6 class="fw-bold mb-0 text-dark">Mariana Gómez</h6>
+                                    <small class="text-muted">Estadía en Suite VIP</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+               
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm p-4 rounded-3">
+                        <div class="card-body d-flex flex-column">
+                            <div class="text-warning mb-3">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="card-text text-secondary mb-4 flex-grow-1 fs-6">
+                                "Excelente gastronomía en el restaurante gourmet y el acceso al Wi-Fi de alta velocidad me permitió trabajar tranquilamente durante mi viaje de negocios. Totalmente recomendado."
+                            </p>
+                            <div class="d-flex align-items-center mt-auto">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Carlos Mendoza" class="rounded-circle me-3" width="50" height="50" style="object-fit: cover;">
+                                <div>
+                                    <h6 class="fw-bold mb-0 text-dark">Carlos Mendoza</h6>
+                                    <small class="text-muted">Estadía Executive</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm p-4 rounded-3">
+                        <div class="card-body d-flex flex-column">
+                            <div class="text-warning mb-3">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-half"></i>
+                            </div>
+                            <p class="card-text text-secondary mb-4 flex-grow-1 fs-6">
+                                "Pasamos nuestras vacaciones familiares aquí y los niños disfrutaron al máximo. Las instalaciones del Spa son relajantes y la atención personalizada fue fantástica."
+                            </p>
+                            <div class="d-flex align-items-center mt-auto">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&q=80" alt="Valeria Ríos" class="rounded-circle me-3" width="50" height="50" style="object-fit: cover;">
+                                <div>
+                                    <h6 class="fw-bold mb-0 text-dark">Valeria Ríos</h6>
+                                    <small class="text-muted">Estadía Familiar</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-5 bg-white border-top">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Nuestra Ubicación</h2>
+                <p class="text-muted">accesible en el corazón del Caribe</p>
+            </div>
+
+            <div class="row g-4 align-items-center">
+                
+                <div class="col-lg-4">
+                    <div class="card border-0 shadow-sm p-4 rounded-3 h-100 bg-light">
+                        <h4 class="fw-bold mb-3 text-dark">Información</h4>
+                        
+                        <div class="d-flex align-items-start mb-3">
+                            <i class="bi bi-geo-alt-fill text-warning fs-4 me-3"></i>
+                            <div>
+                                <strong>Dirección:</strong>
+                                <p class="text-muted mb-0">Vía al Mar Km 15, Barranquilla / Malambo, Atlántico</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-start mb-3">
+                            <i class="bi bi-telephone-fill text-warning fs-4 me-3"></i>
+                            <div>
+                                <strong>Teléfono:</strong>
+                                <p class="text-muted mb-0">+57 (605) 300-0000</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-start mb-4">
+                            <i class="bi bi-envelope-fill text-warning fs-4 me-3"></i>
+                            <div>
+                                <strong>Correo Electrónico:</strong>
+                                <p class="text-muted mb-0">reservas@hotelye.com</p>
+                            </div>
+                        </div>
+
+                        <a href="https://maps.google.com/?q=Barranquilla,Colombia" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark fw-bold w-100">
+                            <i class="bi bi-box-arrow-up-right me-2"></i>Abrir en Google Maps
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contenedor del Mapa -->
+                <div class="col-lg-8">
+                    <div class="rounded-3 overflow-hidden shadow-sm ratio ratio-16x9">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62660.84048731776!2d-74.83151405!3d10.9685404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42d44d1101907%3A0xb36340f1a9e6d013!2sBarranquilla%2C%20Atl%C3%A1ntico!5e0!3m2!1ses!2sco!4v1700000000000!5m2!1ses!2sco" 
+                            width="100%" 
+                            height="450" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-secondary py-4 border-top border-secondary">
+        <div class="container text-center">
+            <p class="mb-1">🏨 Hotel L&E Resort &copy; 2026. Todos los derechos reservados.</p>
+            
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
