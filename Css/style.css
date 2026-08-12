@@ -69,3 +69,9 @@ body.dark-mode .form-select {
 body.dark-mode footer {
     background-color: #050505 !important;
 }
+
+.carousel-img {
+    height: 40vh; /* Ajusta este valor si lo quieres más alto o más bajo (ej. 35vh o 300px) */
+    object-fit: cover; /* Evita que la foto se estire o deforme al recortar los bordes */
+    object-position: center; /* Mantiene el centro de la imagen siempre visible */
+}
