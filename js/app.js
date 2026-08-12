@@ -148,42 +148,42 @@ document.addEventListener("DOMContentLoaded", () => {
             nombre: "Habitación Standard Simple",
             tipo: "Sencilla",
             precio: "$120,000 COP",
-            img: "../images/hab1.avif"
+            img: "images/hab1.avif"
         },
         {
             id: 2,
             nombre: "Habitación Standard Doble",
             tipo: "Sencilla",
             precio: "$160,000 COP",
-            img: "../images/hab2.1.webp"
+            img: "images/hab2.1.webp"
         },
         {
             id: 3,
             nombre: "Deluxe Ocean View",
             tipo: "Deluxe",
             precio: "$250,000 COP",
-            img: "../images/hab2.jpg"
+            img: "images/hab2.jpg"
         },
         {
             id: 4,
             nombre: "Deluxe con Balcón y Jacuzzi",
             tipo: "Deluxe",
             precio: "$320,000 COP",
-            img: "../images/jaz.jpg"
+            img: "images/jaz.jpg"
         },
         {
             id: 5,
             nombre: "Junior Suite Familiar",
             tipo: "Suite",
             precio: "$380,000 COP",
-            img: "../images/hab0.jpg"
+            img: "images/hab0.jpg"
         },
         {
             id: 6,
             nombre: "Presidential Suite VIP",
             tipo: "Suite",
             precio: "$500,000 COP",
-            img: "../images/hab3.jpg"
+            img: "images/hab3.webp"
         }
     ];
 
@@ -198,6 +198,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const filter = document.getElementById("filterSelect");
         const order = document.getElementById("orderSelect");
         const reset = document.getElementById("btnResetFilters");
+
+        // Detecta si la página actual está dentro de /pages/
+        const esSubcarpeta = window.location.pathname.includes("/pages/");
 
         let pagina = 1;
         const porPagina = 3;
@@ -234,19 +237,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
             container.innerHTML = lista
                 .slice(inicio, inicio + porPagina)
-                .map(h => `
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100 shadow-sm border-0">
-                            <img src="${h.img}" class="card-img-top" alt="${h.nombre}">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="fw-bold">${h.nombre}</h5>
-                                <p>Categoría: <span class="badge bg-info text-dark">${h.tipo}</span></p>
-                                <p class="text-primary fw-bold fs-5">${h.precio}</p>
-                                <a href="reservas.html" class="btn btn-primary mt-auto">Reservar</a>
+                .map(h => {
+                    // Ajuste dinámico de la ruta para que cargue desde la raíz o desde /pages/
+                    const rutaImagen = esSubcarpeta ? `../${h.img}` : `./${h.img}`;
+                    const rutaReserva = esSubcarpeta ? "reservas.html" : "pages/reservas.html";
+
+                    return `
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100 shadow-sm border-0">
+                                <img src="${rutaImagen}" class="card-img-top" alt="${h.nombre}">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="fw-bold">${h.nombre}</h5>
+                                    <p>Categoría: <span class="badge bg-info text-dark">${h.tipo}</span></p>
+                                    <p class="text-primary fw-bold fs-5">${h.precio}</p>
+                                    <a href="${rutaReserva}" class="btn btn-primary mt-auto">Reservar</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                `).join("");
+                    `;
+                }).join("");
 
             renderPaginacion(total);
         }
@@ -333,7 +342,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
             localStorage.setItem("reservas", JSON.stringify(reservas));
             alert("¡Reserva confirmada!");
-            window.location.href = "administracion.html";
+            
+            const esSubcarpeta = window.location.pathname.includes("/pages/");
+            window.location.href = esSubcarpeta ? "administracion.html" : "pages/administracion.html";
         });
     }
 
